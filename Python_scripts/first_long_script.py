@@ -1,5 +1,4 @@
 #read file in one-line
-
 [line.strip() for line in open(filename)]
 
 map(lambda x:x**2, [i for i in range(3)]) 
