@@ -1,3 +1,4 @@
+# 1
 """
 Disemvowel trolls
 Тролі атакують твій розділ коментарів!
@@ -18,4 +19,36 @@ if __name__ == "__main__":
     assert disemvowel_trolls("Delete all vowels!") == "Dlt ll vwls!"
     assert disemvowel_trolls("QWERTY") == "QWRTY"
 
+
+# 2
+"""
+Get order
+У твоєму ресторані почали працювати нові касири. Вони вміють приймати замовлення, але не вміють писати слова з великої літери та не вміють користуватися пробілом! Усі створювані ними «замовлення» виглядають приблизно так: "milkshakepizzachickenfriescokeburgerpizzasandwichmilkshakepizza" Але вони хочуть отримувати замовлення у вигляді красивого чистого рядка з пробілами та великими літерами, наприклад: "Burger Fries Chicken Pizza Pizza Pizza Sandwich Milkshake Milkshake Coke"
+Напиши функцію get_order, яка приймає рядок order як аргумент і повертає рядок з більш чітким порядком, з пробілами та великими літерами.
+Примітки:
+Рядок на виході може містити дублікати, наприклад "Chicken Pizza Pizza"
+Персонал кухні очікує, що страви будуть розташовані у тому самому порядку, в якому вони вказані в меню.
+Пункти меню досить прості, пункт не може бути частиною іншого пункту:
+Burger
+Fries
+Chicken
+Pizza
+Sandwich
+Onionrings
+Milkshake
+Coke
+Приклад:
+get_order("burgersandwich") # повертає "Burger Sandwich"
+get_order("cokefriessandwichpizzaburger") # повертає "Burger Fries Pizza Sandwich Coke"
+get_order("pizzachickenfriesburgercokemilkshakefriessandwich") # повертає "Burger Fries Fries Chicken Pizza Sandwich Milkshake Coke"
+"""
+
+def get_order(order: str) -> str:
+  ...
+
+
+if __name__ == "__main__":
+  print(get_order("burgersandwich")) # повертає "Burger Sandwich"
+  print(get_order("cokefriessandwichpizzaburger")) # повертає "Burger Fries Pizza Sandwich Coke"
+  print(get_order("pizzachickenfriesburgercokemilkshakefriessandwich")) # повертає "Burger Fries Fries Chicken Pizza Sandwich Milkshake Coke"
 
