@@ -34,3 +34,6 @@ while line != '':
 f = open("f.txt")
 while (line := f.readline()) != '':
     print(line)
+
+# Fibonacci algorithm
+fib = lambda x: x if x<=1 else fib(x-1) + fib(x-2)
