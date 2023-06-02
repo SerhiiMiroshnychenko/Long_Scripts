@@ -11,3 +11,5 @@ from functools import reduce
 reduce(lambda x, y: x + y, [1, 2, 3])
 # 6
 
+#one-liner
+print(*range(1,5)) #1 2 3 4
