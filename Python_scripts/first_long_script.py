@@ -23,3 +23,14 @@ if mo:
 discount = 0.0
 if (mo := re.search(r'(\d+)% discount', "10% discount")):
   discount = float(mo.group(1)) / 100.0
+
+# without walrus
+f = open("source/a.txt")
+line = f.readline()
+while line != '':
+    print(line)
+    line = f.readline()
+# with walrus
+f = open("f.txt")
+while (line := f.readline()) != '':
+    print(line)
