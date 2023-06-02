@@ -13,3 +13,13 @@ reduce(lambda x, y: x + y, [1, 2, 3])
 
 #one-liner
 print(*range(1,5)) #1 2 3 4
+
+# without walrus
+discount = 0.0
+mo = re.search(r'(\d+)% discount', "10% discount")
+if mo:
+  discount = float(mo.group(1))/100.0
+# with walrus
+discount = 0.0
+if (mo := re.search(r'(\d+)% discount', "10% discount")):
+  discount = float(mo.group(1)) / 100.0
