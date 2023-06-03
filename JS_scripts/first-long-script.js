@@ -46,3 +46,12 @@ sortBy(lessons, 'position');
 // {position: 1, name: 'Intro'}
 
 
+
+/*
+How to Check if Arrays/Objects are Equal
+*/
+
+const isEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+isEqual([1, '2'], [1, 2]); // false
+isEqual([1, 2], [1, 2]); // true
+
