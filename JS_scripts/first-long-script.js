@@ -55,3 +55,14 @@ const isEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 isEqual([1, '2'], [1, 2]); // false
 isEqual([1, 2], [1, 2]); // true
 
+
+/*
+How to Count Number of Occurrences
+*/
+
+const countOccurrences = (arr, value) => arr.reduce((a, v) => (v === value ? a + 1 : a), 0);
+const pollResponses = ["Yes", "Yes", "No"];
+const response = "Yes";
+countOccurrences(pollResponses, response); // 2
+
+
