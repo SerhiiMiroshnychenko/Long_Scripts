@@ -15,6 +15,7 @@ reduce(lambda x, y: x + y, [1, 2, 3])
 print(*range(1,5)) #1 2 3 4
 
 # without walrus
+import re
 discount = 0.0
 mo = re.search(r'(\d+)% discount', "10% discount")
 if mo:
