@@ -1,4 +1,11 @@
 /*
+Positive or negative
+*/
+const a = 10;
+a > 0 ? "positive" : "negative"; // positive
+
+
+/*
 How to Capitalize Text
 */
 
