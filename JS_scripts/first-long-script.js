@@ -1,4 +1,25 @@
 /*
+How to Wait for a Certain Amount of Time
+*/
+const wait = async (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+wait(2000).then(() => goToSignupPage());
+
+
+/*
+How to Use the Pluck Property from Array of Objects
+*/
+const pluck = (objs, key) => objs.map((obj) => obj[key]);
+const users = [{ name: "Abe", age: 45 }, { name: "Jennifer", age: 27 }];
+pluck(users, 'name'); // ['Abe', 'Jennifer']
+
+
+/*
+How to Insert an Element at a Certain Position
+*/
+const insert = (arr, index, newItem) => [...arr.slice(0, index), newItem, ...arr.slice(index)];
+
+
+/*
 Positive or negative
 */
 const a = 10;
