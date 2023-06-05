@@ -1,7 +1,13 @@
-#read file in one-line
-[line.strip() for line in open(filename)]
+# Найчастіший елемент у списку
+lst = [1, 4, 4, 4, 2, 5, 6, 6, 7, 8, 9, 10]
+frequent = max(set(lst), key=lst.count)
+print(frequent)
 
-map(lambda x:x**2, [i for i in range(3)]) 
+
+#read file in one-line
+[line.strip() for line in open('D:\Python\LongScripts\JS_scripts\\first-long-script.js')]
+
+map(lambda x:x**2, list(range(3)))
 # <map object at 0x105558a90>
 
 filter(lambda x: x % 2 == 0, [1, 2, 3])
@@ -17,13 +23,12 @@ print(*range(1,5)) #1 2 3 4
 # without walrus
 import re
 discount = 0.0
-mo = re.search(r'(\d+)% discount', "10% discount")
-if mo:
-  discount = float(mo.group(1))/100.0
+if mo := re.search(r'(\d+)% discount', "10% discount"):
+  discount = float(mo[1]) / 100.0
 # with walrus
 discount = 0.0
 if (mo := re.search(r'(\d+)% discount', "10% discount")):
-  discount = float(mo.group(1)) / 100.0
+  discount = float(mo[1]) / 100.0
 
 # without walrus
 f = open("source/a.txt")
