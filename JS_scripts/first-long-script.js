@@ -1,6 +1,9 @@
 /*
 How to Wait for a Certain Amount of Time
 */
+function goToSignupPage() {
+    console.log("Sign up page is her!");
+}
 const wait = async (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 wait(2000).then(() => goToSignupPage());
 
@@ -42,7 +45,7 @@ How to Calculate Percent
 const calculatePercent = (value, total) => Math.round((value / total) * 100)
 const questionsCorrect = 6;
 const questionTotal = 11;
-calculatePercent(questionsCorrect, questionsTotal); // 55
+calculatePercent(questionsCorrect, questionTotal); // 55
 
 
 /*
