@@ -5,7 +5,7 @@ print(frequent)
 
 
 #read file in one-line
-[line.strip() for line in open('D:\Python\LongScripts\JS_scripts\\first-long-script.js')]
+[line.strip() for line in open('D:/Python/LongScripts/JS_scripts/first-long-script.js')]
 
 map(lambda x:x**2, list(range(3)))
 # <map object at 0x105558a90>
@@ -17,8 +17,8 @@ from functools import reduce
 reduce(lambda x, y: x + y, [1, 2, 3])
 # 6
 
-#one-liner
-print(*range(1,5)) #1 2 3 4
+# one-liner
+print(*range(1, 5))  #1 2 3 4
 
 # without walrus
 import re
@@ -31,13 +31,13 @@ if (mo := re.search(r'(\d+)% discount', "10% discount")):
   discount = float(mo[1]) / 100.0
 
 # without walrus
-f = open("source/a.txt")
+f = open("D:/Python/LongScripts/JS_scripts/first-long-script.js")
 line = f.readline()
 while line != '':
     print(line)
     line = f.readline()
 # with walrus
-f = open("f.txt")
+f = open("D:/Python/LongScripts/JS_scripts/first-long-script.js")
 while (line := f.readline()) != '':
     print(line)
 
