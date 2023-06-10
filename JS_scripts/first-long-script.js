@@ -96,5 +96,3 @@ const countOccurrences = (arr, value) => arr.reduce((a, v) => (v === value ? a +
 const pollResponses = ["Yes", "Yes", "No"];
 const response = "Yes";
 countOccurrences(pollResponses, response); // 2
-
-
