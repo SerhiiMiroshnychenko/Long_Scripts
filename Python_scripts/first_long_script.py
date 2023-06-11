@@ -1,3 +1,9 @@
+# List with descending values and negative values
+my_list = list(range(5, -5, -1))
+print(my_list)
+# Shows: [5, 4, 3, 2, 1, 0, -1, -2, -3, -4]
+
+
 my_tuple = (1, 2) * 5
 print(my_tuple)
 # Shows: (1, 2, 1, 2, 1, 2, 1, 2, 1, 2)
