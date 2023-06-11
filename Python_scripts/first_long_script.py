@@ -1,3 +1,15 @@
+# Pythonic way
+a, b, c, d = 1, "ok", True, ["i", "j"]
+a, b, c, d = c, a, d, b
+ 
+# Result
+print(a, b, c, d)
+# Shows: True 1 ["i", "j"] ok
+
+
+
+
+
 # Найчастіший елемент у списку
 lst = [1, 4, 4, 4, 2, 5, 6, 6, 7, 8, 9, 10]
 frequent = max(set(lst), key=lst.count)
