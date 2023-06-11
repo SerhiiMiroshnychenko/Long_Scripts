@@ -1,3 +1,13 @@
+my_set = set(range(count))
+my_tuple = tuple(range(count))
+ 
+# Result
+print(my_set)
+# Shows: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
+print(my_tuple)
+# Shows: (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+
 # List with descending values and negative values
 my_list = list(range(5, -5, -1))
 print(my_list)
