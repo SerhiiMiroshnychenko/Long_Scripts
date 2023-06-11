@@ -1,3 +1,7 @@
+// Generate Random Color
+const generateRandomHexColor = () =>
+  `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+
 // Scroll To Bottom
 const scrollToBottom = (element) =>
   element.scrollIntoView({ behavior: "smooth", block: "end" });
