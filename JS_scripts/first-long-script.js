@@ -1,3 +1,35 @@
+// Shuffle Array
+const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5);
+// Testing
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(shuffleArray(arr));
+
+// Copy to Clipboard
+const copyToClipboard = (text) =>
+  navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
+// Testing
+copyToClipboard("Hello World!");
+
+
+// Unique Elements
+const getUnique = (arr) => [...new Set(arr)];
+// Testing
+const arr = [1, 1, 2, 3, 3, 4, 4, 4, 5, 5];
+console.log(getUnique(arr));
+
+// Detect Dark Mode
+const isDarkMode = () =>
+  window.matchMedia &&
+  window.matchMedia("(prefers-color-scheme: dark)").matches;
+// Testing
+console.log(isDarkMode());
+
+// Scroll To Top
+const scrollToTop = (element) =>
+  element.scrollIntoView({ behavior: "smooth", block: "start" });
+
+
+
 /*
 How to Wait for a Certain Amount of Time
 */
