@@ -1,3 +1,8 @@
+my_set = set(count**x for x in range(count))
+print(my_set)
+# Shows: {1, 4, 16, 64}
+
+
 my_set = set(range(count))
 my_tuple = tuple(range(count))
  
