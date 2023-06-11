@@ -1,3 +1,14 @@
+# Traditional way
+lines = []
+with open(filename) as file:
+for count, line in enumerate(file):
+lines.append(f"Line {count + 1}: " + line.strip())
+ 
+# Pythonic way
+with open(filename) as file:
+lines = [f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)]
+
+
 my_set = set(count**x for x in range(count))
 print(my_set)
 # Shows: {1, 4, 16, 64}
