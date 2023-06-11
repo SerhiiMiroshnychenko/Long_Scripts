@@ -1,3 +1,8 @@
+my_tuple = (1, 2) * 5
+print(my_tuple)
+# Shows: (1, 2, 1, 2, 1, 2, 1, 2, 1, 2)
+
+
 size = 10
  
 # Traditional way
