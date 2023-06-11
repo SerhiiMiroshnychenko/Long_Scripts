@@ -1,3 +1,7 @@
+with open(filename) as file:
+lines = {f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)}
+
+
 # Discouraged
 with open(filename) as file: lines = [f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)]
 
