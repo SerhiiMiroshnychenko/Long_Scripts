@@ -1,3 +1,8 @@
+// Scroll To Bottom
+const scrollToBottom = (element) =>
+  element.scrollIntoView({ behavior: "smooth", block: "end" });
+
+
 // Shuffle Array
 const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5);
 // Testing
@@ -9,7 +14,6 @@ const copyToClipboard = (text) =>
   navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
 // Testing
 copyToClipboard("Hello World!");
-
 
 // Unique Elements
 const getUnique = (arr) => [...new Set(arr)];
@@ -27,8 +31,6 @@ console.log(isDarkMode());
 // Scroll To Top
 const scrollToTop = (element) =>
   element.scrollIntoView({ behavior: "smooth", block: "start" });
-
-
 
 /*
 How to Wait for a Certain Amount of Time
