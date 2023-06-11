@@ -1,3 +1,18 @@
+size = 10
+ 
+# Traditional way
+my_list = []
+for i in range(size):
+    my_list.append(0)
+ 
+# Pythonic way
+my_list = [0] * size
+ 
+# Result
+print(my_list)
+# Shows: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+
+
 # Pythonic way
 a, b, c, d = 1, "ok", True, ["i", "j"]
 a, b, c, d = c, a, d, b
