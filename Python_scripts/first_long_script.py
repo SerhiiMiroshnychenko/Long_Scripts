@@ -1,3 +1,21 @@
+# Finding all subsets of a set in one line
+from itertools import combinations
+# list of all subsets of
+# length r (r = 2 in this example)
+print(list(combinations([1, 2, 3, 4], 2)))
+
+# Read file in python and input it to a list. 
+file = open('gfg.txt', 'r')
+lis =[]
+for each in file:
+    # removing '\n' from the end of the string
+    a = each[:-1]
+    lis.append(a)
+file.close()
+# or
+lis = [line.strip() for line in open('gfg.txt', 'r')]
+
+
 # Finding the factorial
 
 n = 5
