@@ -1,3 +1,8 @@
+# To input space separated integers in a list
+lis = list(map(int, input().split()))
+
+
+
 with open(filename) as file:
 lines = {f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)}
 
