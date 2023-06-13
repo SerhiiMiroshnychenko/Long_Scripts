@@ -1,3 +1,13 @@
+# Making one-liner python patterns
+
+n = 5
+ 
+# one liner code for half pyramid pattern
+print('\n'.join('* ' * i for i in range(1, n + 1)))
+
+
+
+
 # To input a 2-D matrix(When the entries are given row-wise): The most naive method that comes in mind while taking a input for 2-D matrix is given below. 
 
 # Input for row and column
