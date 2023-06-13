@@ -1,3 +1,14 @@
+# Loops through a list of words and returns a new list containing all elements that are present on the given string
+
+#: sample list
+list = ['hello', 'welcome', 'guest', 'show']
+#: sample string
+sentence = "Hello world! Im here to show you a word filter"
+ 
+#: print all words in list that are present in sentence
+print([word for word in list if word in ("".join(word for word in sentence.lower() if word.isalpha() or word.isnumeric() or word == " ")).split(" ")])
+
+
 # Finding all subsets of a set in one line
 from itertools import combinations
 # list of all subsets of
