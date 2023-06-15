@@ -1,23 +1,25 @@
 # Loops through a list of words and returns a new list containing all elements that are present on the given string
 
 #: sample list
-list = ['hello', 'welcome', 'guest', 'show']
+list_ = ['hello', 'welcome', 'guest', 'show']
 #: sample string
 sentence = "Hello world! Im here to show you a word filter"
- 
-#: print all words in list that are present in sentence
-print([word for word in list if word in ("".join(word for word in sentence.lower() if word.isalpha() or word.isnumeric() or word == " ")).split(" ")])
 
+#: print all words in list that are present in sentence
+print([word for word in list_ if
+       word in ("".join(word for word in sentence.lower() if word.isalpha() or word.isnumeric() or word == " ")).split(
+           " ")])
 
 # Finding all subsets of a set in one line
 from itertools import combinations
+
 # list of all subsets of
 # length r (r = 2 in this example)
 print(list(combinations([1, 2, 3, 4], 2)))
 
 # Read file in python and input it to a list. 
 file = open('gfg.txt', 'r')
-lis =[]
+lis = []
 for each in file:
     # removing '\n' from the end of the string
     a = each[:-1]
@@ -26,90 +28,73 @@ file.close()
 # or
 lis = [line.strip() for line in open('gfg.txt', 'r')]
 
-
 # Finding the factorial
 
 n = 5
 fact = 1
 for i in range(1, n + 1):
     fact = fact * i
-print (fact)
+print(fact)
 
 import math
+
 n = 5
 print(math.factorial(n))
 
-import functools
 n = 5
-print(functools.reduce(lambda x, y: x * y, 
-
-
-# Making one-liner python patterns
-
-n = 5
- 
 # one liner code for half pyramid pattern
 print('\n'.join('* ' * i for i in range(1, n + 1)))
-
-
-
 
 # To input a 2-D matrix(When the entries are given row-wise): The most naive method that comes in mind while taking a input for 2-D matrix is given below. 
 
 # Input for row and column
 R = int(input())
 C = int(input())
- 
 matrix = []
- 
+
 # for loop for row entries
-for i in range(R):         
-    a =[]
- 
+for i in range(R):
+    a = []
     # for loop for column entries
     for j in range(C):
-         a.append(int(input()))
+        a.append(int(input()))
     matrix.append(a)
 
 # Input for row and column
 R = int(input())
 C = int(input())
- 
-# Using list comprehension for input
-matrix = [[int(input()) for x in range (C)] for y in range(R)]
 
+# Using list comprehension for input
+matrix = [[int(input()) for x in range(C)] for y in range(R)]
 
 # To input space separated integers in a list
 lis = list(map(int, input().split()))
 
-
-with open(filename) as file:
-lines = {f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)}
-
+with open('D:/Python/LongScripts/JS_scripts/first-long-script.js') as file:
+    lines = {f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)}
 
 # Discouraged
-with open(filename) as file: lines = [f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)]
-
+with open('D:/Python/LongScripts/JS_scripts/first-long-script.js') as file: lines = [
+    f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)]
 
 # Traditional way
 lines = []
-with open(filename) as file:
-for count, line in enumerate(file):
-lines.append(f"Line {count + 1}: " + line.strip())
- 
+with open('D:/Python/LongScripts/JS_scripts/first-long-script.js') as file:
+    for count, line in enumerate(file):
+        lines.append(f"Line {count + 1}: " + line.strip())
+
 # Pythonic way
-with open(filename) as file:
-lines = [f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)]
+with open('D:/Python/LongScripts/JS_scripts/first-long-script.js') as file:
+    lines = [f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)]
 
-
-my_set = set(count**x for x in range(count))
+my_set = set(count ** x for x in range(count))
 print(my_set)
 # Shows: {1, 4, 16, 64}
 
 
 my_set = set(range(count))
 my_tuple = tuple(range(count))
- 
+
 # Result
 print(my_set)
 # Shows: {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}
@@ -129,15 +114,15 @@ print(my_tuple)
 
 
 size = 10
- 
+
 # Traditional way
 my_list = []
 for i in range(size):
     my_list.append(0)
- 
+
 # Pythonic way
 my_list = [0] * size
- 
+
 # Result
 print(my_list)
 # Shows: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -146,23 +131,23 @@ print(my_list)
 # Pythonic way
 a, b, c, d = 1, "ok", True, ["i", "j"]
 a, b, c, d = c, a, d, b
- 
+
 # Result
 print(a, b, c, d)
 # Shows: True 1 ["i", "j"] ok
 
 
 x = 3
- 
+
 # Traditional way
 if x % 2 == 1:
-result = f"{x} is odd"
+    result = f"{x} is odd"
 else:
     result = f"{x} is even"
- 
+
 # Pythonic way
 result = f"{x} " + ("is odd" if x % 2 == 1 else "is even")
- 
+
 # Result
 print(result)
 # Shows: 3 is odd
