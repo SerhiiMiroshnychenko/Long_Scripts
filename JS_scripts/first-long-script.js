@@ -1,21 +1,21 @@
 // Generate Random Color
 const generateRandomHexColor = () =>
-  `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
+    `#${Math.floor(Math.random() * 0xffffff).toString(16)}`;
 
 // Scroll To Bottom
 const scrollToBottom = (element) =>
-  element.scrollIntoView({ behavior: "smooth", block: "end" });
+    element.scrollIntoView({behavior: "smooth", block: "end"});
 
 
 // Shuffle Array
 const shuffleArray = (arr) => arr.sort(() => Math.random() - 0.5);
 // Testing
-const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-console.log(shuffleArray(arr));
+const arr1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+console.log(shuffleArray(arr1));
 
 // Copy to Clipboard
 const copyToClipboard = (text) =>
-  navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
+    navigator.clipboard?.writeText && navigator.clipboard.writeText(text);
 // Testing
 copyToClipboard("Hello World!");
 
@@ -27,14 +27,14 @@ console.log(getUnique(arr));
 
 // Detect Dark Mode
 const isDarkMode = () =>
-  window.matchMedia &&
-  window.matchMedia("(prefers-color-scheme: dark)").matches;
+    window.matchMedia &&
+    window.matchMedia("(prefers-color-scheme: dark)").matches;
 // Testing
 console.log(isDarkMode());
 
 // Scroll To Top
 const scrollToTop = (element) =>
-  element.scrollIntoView({ behavior: "smooth", block: "start" });
+    element.scrollIntoView({behavior: "smooth", block: "start"});
 
 /*
 How to Wait for a Certain Amount of Time
@@ -134,3 +134,8 @@ const countOccurrences = (arr, value) => arr.reduce((a, v) => (v === value ? a +
 const pollResponses = ["Yes", "Yes", "No"];
 const response = "Yes";
 countOccurrences(pollResponses, response); // 2
+
+let x = 'hello'
+if (x === 'hello') {
+    console.log(x);
+}
