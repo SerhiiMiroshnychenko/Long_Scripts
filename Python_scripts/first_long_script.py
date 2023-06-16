@@ -71,29 +71,29 @@ matrix = [[int(input()) for x in range(C)] for y in range(R)]
 lis = list(map(int, input().split()))
 
 with open('D:/Python/LongScripts/JS_scripts/first-long-script.js') as file:
-    lines = {f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)}
+    lines = {f"Line {count_ + 1}: " + line.strip() for count_, line in enumerate(file)}
 
 # Discouraged
 with open('D:/Python/LongScripts/JS_scripts/first-long-script.js') as file: lines = [
-    f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)]
+    f"Line {count_ + 1}: " + line.strip() for count_, line in enumerate(file)]
 
 # Traditional way
 lines = []
 with open('D:/Python/LongScripts/JS_scripts/first-long-script.js') as file:
-    for count, line in enumerate(file):
-        lines.append(f"Line {count + 1}: " + line.strip())
+    for count_, line in enumerate(file):
+        lines.append(f"Line {count_ + 1}: " + line.strip())
 
 # Pythonic way
 with open('D:/Python/LongScripts/JS_scripts/first-long-script.js') as file:
     lines = [f"Line {count + 1}: " + line.strip() for count, line in enumerate(file)]
 
-my_set = set(count ** x for x in range(count))
+my_set = set(count_ ** x for x in range(count_))
 print(my_set)
 # Shows: {1, 4, 16, 64}
 
 
-my_set = set(range(count))
-my_tuple = tuple(range(count))
+my_set = set(range(count_))
+my_tuple = tuple(range(count_))
 
 # Result
 print(my_set)
