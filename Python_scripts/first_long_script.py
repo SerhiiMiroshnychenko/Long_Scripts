@@ -1,3 +1,16 @@
+
+# One line if statement:
+
+if a > b: print("a is greater than b")
+
+
+# One line if else statement:
+
+a = 2
+b = 330
+print("A") if a > b else print("B")
+
+
 # Loops through a list of words and returns a new list containing all elements that are present on the given string
 
 #: sample list
