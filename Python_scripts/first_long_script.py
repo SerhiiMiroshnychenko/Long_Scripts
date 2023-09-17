@@ -1,4 +1,4 @@
-# Подивитися код функції
+# Подивитися вихідний код
 
 import inspect
 from queue import Queue
