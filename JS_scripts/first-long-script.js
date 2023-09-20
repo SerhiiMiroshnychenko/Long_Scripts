@@ -1,3 +1,14 @@
+// Set Object
+
+let set = new Set([1, 2, 4, 2, 59, 9, 4, 9, 1]);
+console.log(set.size); // 5
+
+let set = new Set();
+set.add(5).add(9).add(59).add(9);
+console.log(set.has(9));
+for (let v of set.values())
+    console.log(v);
+
 // Map Object
 
 let map = new Map([['k1', 'v1'], ['k2', 'v2']]);
