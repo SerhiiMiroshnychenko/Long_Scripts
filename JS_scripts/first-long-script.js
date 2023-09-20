@@ -10,6 +10,14 @@ for (let v in obj) {
     console.log(v);
 }
 
+let list = ["x", "y", "z"];
+for (let val of list) {
+    console.log(val);
+}
+
+for (let ch of "Hello") {
+    console.log(ch);
+}
 
 // Var and Let difference
 
