@@ -1,3 +1,26 @@
+// Objects
+
+let tree = {
+    height: 10,
+    color: 'green',
+    grow() { 
+        this.height += 2;
+    }
+};
+tree.grow();
+console.log(tree.height); // 12
+
+let height = 5;
+let health = 100;
+let athlete = {
+    height, // height: height,
+    health // health: health
+};
+console.log(athlete.height); // 5
+
+var a = {x: 1, x: 2, x: 3, x: 4};
+console.log(a.x); // 4 
+
 // Default Parameters
 
 /*
