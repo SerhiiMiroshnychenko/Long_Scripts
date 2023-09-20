@@ -1,3 +1,27 @@
+// Object Destructuring
+
+let obj = {h:100, s: true};
+let {h, s} = obj;
+console.log(h);
+console.log(s);
+
+let a, b;
+({a, b} = {a: 'Hello ', b: 'Jack'});
+console.log(a + b);
+
+let {a, b} = {a: 'Hello ', b: 'Jack'};
+console.log(a + b);
+
+var o = {h: 42, s: true};
+var {h: foo, s: bar} = o;
+//console.log(h); // Error
+console.log(foo); // 42
+
+var obj = {id: 42, name: "Jack"};
+let {id = 10, age = 20} = obj;
+console.log(id); // 42
+console.log(age); // 20
+
 // Array Destructuring
 
 let arr = ['1', '2', '3'];
