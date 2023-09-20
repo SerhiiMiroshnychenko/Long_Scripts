@@ -1,3 +1,38 @@
+
+// The Spread Operator
+
+const myFunction = (w, x, y, z) => {
+    console.log(w + x + y + z);
+};
+let args = [1, 2, 3];
+myFunction(...args, 4); //10
+
+var dateFields = [1970, 0, 1];  // 1 Jan 1970
+var date = new Date(...dateFields);
+console.log(date);
+
+var arr = ["One", "Two", "Five"];
+arr.splice(2, 0, "Three");
+arr.splice(3, 0, "Four");
+console.log(arr); // One,Two,Three,Four,Five
+
+let newArr = ['Three', 'Four']; 
+let arr = ['One', 'Two', ...newArr, 'Five'];
+console.log(arr); // One,Two,Three,Four,Five
+
+const obj1 = { foo: 'bar', x: 42 };
+const obj2 = { foo: 'baz', y: 5 };
+const clonedObj = { ...obj1 }; // { foo: "bar", x: 42 }
+const mergedObj = { ...obj1, ...obj2 }; // { foo: "baz", x: 42, y: 5 }
+
+const obj1 = { foo: 'bar', x: 42 };
+const obj2 = { foo: 'baz', y: 5 };
+const merge = (...objects) => ({ ...objects });
+let mergedObj = merge (obj1, obj2);
+// { 0: { foo: 'bar', x: 42 }, 1: { foo: 'baz', y: 5 } }
+let mergedObj2 = merge ({}, obj1, obj2);
+// { 0: {}, 1: { foo: 'bar', x: 42 }, 2: { foo: 'baz', y: 5 } }
+
 // Rest Parameters
 
 function containsAll(arr) {
