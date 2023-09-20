@@ -1,3 +1,33 @@
+// Functions
+
+function add(x, y) {
+    var sum = x+y;  
+    console.log(sum);
+}
+add(35, 7);
+
+const add = (x, y) => {
+    let sum = x + y;  
+    console.log(sum);
+}
+add(35, 7);
+
+const greet = x => "Welcome " + x;
+alert(greet("David"));
+
+const x = () => alert("Hi");
+x();
+
+var arr = [2, 3, 7, 8];
+arr.forEach(function(el) {
+    console.log(el * 2);
+});
+
+const arr = [2, 3, 7, 8];
+arr.forEach(v => {
+    console.log(v * 2);
+});
+
 // Loops
 
 let arr = [1, 2, 3];
