@@ -1,4 +1,73 @@
 """
+Numpy array indexes
+"""
+
+import numpy as np
+
+heights = [189, 170, 189, 163, 183, 171, 185, 168, 173, 183, 173, 173, 175, 178, 183, 193, 178, 173, 174, 183, 183, 180, 168, 180, 170, 178, 182, 180, 183, 178, 182, 188, 175, 179, 183, 193, 182, 183, 177, 185, 188, 188, 182, 185, 191]
+
+heights_arr = np.array(heights)
+print(heights_arr[2])
+
+ages = [57, 61, 57, 57, 58, 57, 61, 54, 68, 51, 49, 64, 50, 48, 65, 52, 56, 46, 54, 49, 51, 47, 55, 55, 54, 42, 51, 56, 55, 51, 54, 51, 60, 62, 43, 55, 56, 61, 52, 69, 64, 46, 54, 47, 70]
+
+heights_and_ages = heights + ages
+heights_and_ages_arr = np.array(heights_and_ages)
+heights_and_ages_arr = heights_and_ages_arr.reshape((2,45))
+print(heights_and_ages_arr[1,2])
+
+# Індексація двомірного масива
+#     1     2     3     4     5 ...
+# 1 [0,0] [0,1] [0,2] [0,3]  ...
+# 2 [1,0] [1,1] [1,2] [1,3]   ...
+# 3 [2,0] [2,1] [2,2] [2,3]   ...
+# ...
+
+# array indexing is same as list indexing
+
+import numpy as np
+arr1 = np.array([1,2,3,4,5])
+print(arr1[0])
+#>> 1
+
+# for 2 dimentional arrays
+arr2 = np.array([[1,2,3], [4,5,6]])
+print(arr2[1][0])  # array[row][column]
+#>> 4
+print(arr2[1,0])   ## array[row, column]
+#>> 4
+
+#slicing
+arr1 = np.array([1,2,3,4,5])
+print(arr1[1:3])
+#>> [2 3]
+
+# for 2 dimentional arrays
+arr2 = np.array([[1,2,3], [4,5,6]])
+print(arr2[0,:])  # row index zero and all columns
+#>>  [1, 2, 3]
+print(arr2[0,0:2])  # row index zero and first 2 columns
+#>> [1 2]
+print(arr2[:,1])  # all rows and only column index 1
+#>> [2 5]
+
+"""
+5th Row is:
+0
+1
+2
+3
+4
+
+And 2nd Column is:
+0 1
+
+So rows index downwards starting from 0
+Columns index left to right starting from 0
+Hence (4,1) for 5th row and 2nd Column
+"""
+
+"""
 Slicing (lesson summary)
 
 [<row> START : STOP : STEP,  <column> START : STOP : STEP]
