@@ -2,7 +2,7 @@
 Numpy arrays reshape
 """
 
-impimportort numpy as np
+import numpy as np
 
 A = ["a","b","c"]
 B = ["x","y","z"]
