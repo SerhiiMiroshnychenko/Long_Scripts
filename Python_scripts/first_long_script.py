@@ -1,4 +1,30 @@
 """
+Numpy arrays reshape
+"""
+
+impimportort numpy as np
+
+A = ["a","b","c"]
+B = ["x","y","z"]
+
+C = A + B
+
+# convert a list into a numpy array
+D = np.array(C)
+
+print (D.size)
+print (D.shape)
+
+#D.reshape format is (row,column). Same as Matrices.
+print (D.reshape(2,3))
+print (D.reshape(3,2))
+
+#if you leave one entry as -1, numpy will automatically guess it for you. As a result, the array size (number of elements of the array) is kept the same.
+print (D.reshape(2,-1))
+print (D.reshape(-1,2))
+
+
+"""
 Тип даних
   Ще одна особливість масиву numpy в тому, що він однорідний, щоб кожен елемент мав мати один і той самий тип даних.
   Наприклад, у heights_arr ми записали всі висоти в цілих числах;  таким чином, кожен елемент зберігається як ціле число в масиві.  Щоб перевірити тип даних, використовуйте numpy.ndarray.dtype.
