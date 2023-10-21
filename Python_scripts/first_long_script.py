@@ -1,4 +1,27 @@
 """
+Numpy arrays functions 
+"""
+
+import numpy as np
+list = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("List:", list)
+arr = np.array(list)
+print("Numpy array:", arr)
+print("Array size:", arr.size)
+print("Array shape:", arr.shape)
+arr2 = arr.reshape((2, 5))
+print("Reshaped array:", arr2)
+flist = [0.0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+print("Float list:", flist)
+farr = np.array(flist)
+print("Float array:", farr)
+blist = [True, False, False, True, True]
+print("Boolean list:", blist)
+barr = np.array(blist)
+print("Boolean array:", barr)
+
+
+"""
 Numpy arrays reshape
 """
 
