@@ -1,4 +1,89 @@
 """
+NumPy array sum
+"""
+
+heights = [189, 170, 189, 163, 183, 171, 185, 168, 173, 183, 173, 173, 175, 178, 183, 193, 178, 173, 174, 183, 183, 180, 168, 180, 170, 178, 182, 180, 183, 178, 182, 188, 175, 179, 183, 193, 182, 183, 177, 185, 188, 188, 182, 185, 191]
+
+cnt = 0
+for height in heights:
+    if height > 188:
+        cnt +=1
+print(cnt)
+
+# Or simply just:
+print(sum([(i>188) for i in heights]))
+
+# Same with numpy
+import numpy as np
+
+heights_arr = np.array(heights)
+print((heights_arr > 188).sum())
+
+#======== Example ==========
+a = [1,2,3,4,5,6]
+b = np.array(a)
+
+c = (b > 3)
+
+# c = [False False False True True True]
+
+print(c.sum())
+
+#sum ~~> 0+0+0+1+1+1=3 bcz False=0 & True=1
+
+#===========================
+
+# Кількість елементів
+print(heights_arr.size) 
+#>> 45
+
+# Форма (кількість елементів, кільксть рівнів)
+print(heights_arr.shape)
+#>> (45,)
+
+
+#======== Example ==========
+arr1 = np.array([1,2,3])
+print(arr1)
+#>> [1 2 3]
+print(arr1.size)
+#>> 3 (means 3 members inside array)
+print(arr1.shape)
+#>> (3,) - its a 1 dimentional array
+
+arr2 = np.array([[1,2,3], [3,4,6]])
+print(arr2.size)
+#>> 6 (means 6 members inside array)
+print(arr2.shape)
+#>> (2, 3) - its a 2 dimentional array
+
+arr3 = np.array([[[1,2],[3,4]], [[5,6],[7,8]]])
+print(arr3.size)
+#>> 8 (means 8 members inside array)
+print(arr3.shape)
+#>> (2, 2, 2) - its a 3 dimentional array
+#dimentions of an array we can identify with the number of square brackets in front of the array
+
+#========= Example =======
+
+a = np.array((1,2,3,4,5,6))
+
+print('Size of a (1d)' , a.size)
+print('Shape of a (1d)',a.shape)
+
+b = np.array(((1,2),(3,4),(5,6)))
+##############
+# b = [[1 2]  \
+#         [3 4]    3
+#         [5 6]] /
+#          \  /
+#           2
+##############
+print(b.shape) # (3,2)
+print(b.size)  # 6
+
+
+"""
 Numpy arrays functions 
 """
 
