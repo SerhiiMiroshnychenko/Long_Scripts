@@ -1,4 +1,31 @@
 """
+Reduce-sum
+"""
+
+from functools import reduce
+
+a,b,c = 1, 2, 3
+x,y,z = 'a','b','c'
+
+def add(*args):
+  return reduce(lambda x,y: x+y, args)
+  #return reduce(sum, args)
+
+print(add(a,b,c))
+print(add(x,y,z))
+
+#print(sum([1,2,3]))
+#print(sum(['a','b','c']))
+
+nums = 1,2,3,4,5
+chars = tuple('abcde')
+print(chars)
+print(sum(nums))
+#print(sum(chars))
+print(add(*chars))
+
+
+"""
 NumPy array sum
 """
 
