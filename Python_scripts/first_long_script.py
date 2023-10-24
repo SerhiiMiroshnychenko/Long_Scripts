@@ -1,4 +1,11 @@
 """
+Empty list to string
+"""
+empt = []
+print(str(empt)+'[')
+
+
+"""
 Reduce-sum
 """
 
