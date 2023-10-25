@@ -1,4 +1,18 @@
 """
+Lambda abc
+"""
+
+a = lambda: print('Hello', end=' ')
+b = lambda: print('Solo', end='')
+c = lambda: print('Learn', end='!')
+
+commands = a, b, c
+
+for c in commands:
+  c()
+
+
+"""
 Empty list to string
 """
 empt = []
