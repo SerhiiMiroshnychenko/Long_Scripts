@@ -1,4 +1,49 @@
 """
+Pythonic without Map
+"""
+
+# Generating a list with map
+# list(map(function, iterable))
+
+# Generating a list with a list comprehension
+# [function(x) for x in iterable]
+
+
+# Transformation function
+def square(number):
+     return number ** 2
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+# Using map()
+print(list(map(square, numbers)))
+
+# Using a list comprehension
+print([square(x) for x in numbers])
+
+# Transformation function
+def square(number):
+     return number ** 2
+
+numbers = [1, 2, 3, 4, 5, 6]
+
+# Using map()
+map_obj = map(square, numbers)
+print(map_obj)
+
+
+print(list(map_obj))
+
+# Using a generator expression
+gen_exp = (square(x) for x in numbers)
+print(gen_exp)
+
+print(list(gen_exp))
+
+print(list(square(x) for x in numbers))
+
+
+"""
 Print numbers
 """
 
