@@ -1,4 +1,24 @@
 """
+Starmap
+"""
+
+"""
+intertools.starmap
+==
+def starmap(function, iterable):
+    for args in iterable:
+        yield function(*args)
+"""
+
+from itertools import starmap
+
+print(list(starmap(pow, [(2, 7), (4, 3)])))
+
+print(list(map(pow, (2, 7), (4, 3))))
+print(list(map(pow, (2, 4), (7, 3))))
+
+
+"""
 Pythonic without Map
 """
 
