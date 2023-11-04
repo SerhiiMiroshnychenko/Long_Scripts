@@ -1,4 +1,20 @@
 """
+Map for string
+"""
+
+string_it = ["processing", "strings", "with", "map"]
+print(list(map(str.capitalize, string_it)))
+
+with_spaces = ["processing ", "  strings", "with   ", " map   "]
+
+print(list(map(str.strip, with_spaces)))
+
+with_dots = ["processing..", "...strings", "with....", "..map.."]
+
+print(list(map(lambda s: s.strip("."), with_dots)))
+
+
+"""
 Map + re
 """
 
