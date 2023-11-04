@@ -1,4 +1,32 @@
 """
+Map + math
+"""
+
+def powers(x):
+     return x ** 2, x ** 3
+
+
+numbers = [1, 2, 3, 4]
+
+print(list(map(powers, numbers)))
+
+import math
+
+numbers = [1, 2, 3, 4, 5, 6, 7]
+
+print(list(map(math.factorial, numbers)))
+
+def to_float(number):
+     try:
+         return float(number.replace(",", "."))
+     except ValueError:
+         return float("nan")
+
+
+print(list(map(to_float, ["12.3", "3,3", "-15.2", "One"])))
+
+
+"""
 Map + filter
 """
 
