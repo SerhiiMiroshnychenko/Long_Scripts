@@ -1,4 +1,28 @@
 """
+Map
+"""
+
+def square(number):
+     return number ** 2
+
+
+numbers = [1, 2, 3, 4, 5]
+
+squared = map(square, numbers)
+print(list(squared))
+
+qube = map(lambda x: x**3, numbers)
+print(list(qube))
+
+strings = map(str, numbers)
+print(list(strings))
+
+words = ["Welcome", "to", "Real", "Python"]
+
+print(list(map(len, words)))
+
+
+"""
 Map for a few collections
 """
 
