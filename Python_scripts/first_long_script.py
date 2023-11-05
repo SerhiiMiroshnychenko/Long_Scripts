@@ -1,4 +1,22 @@
 """
+Map for a few collections
+"""
+
+first_it = [1, 2, 3]
+second_it = [4, 5, 6, 7]
+
+print(list(map(pow, first_it, second_it)))
+
+first = [1, 2, 3, 4]
+second = [10, 20, 30, 40, 50]
+result = map(lambda x,y: x-y, second, first)
+
+print(list(result))
+
+print(list(map(lambda x, y, z: x + y + z, [2, 4], [1, 3], [7, 8])))
+
+
+"""
 Map for string
 """
 
