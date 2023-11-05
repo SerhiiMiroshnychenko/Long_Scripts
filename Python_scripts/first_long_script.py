@@ -1,4 +1,34 @@
 """
+Get order
+"""
+
+def get_order(order: str) -> str: 
+  components = (
+    'Burger', 
+    'Fries', 
+    'Chicken', 
+    'Pizza', 
+    'Sandwich', 
+    'Onionrings', 
+    'Milkshake', 
+    'Coke'
+    )
+  fix_order = ''
+  for word in components:
+    if word.lower() in order:
+      fix_order += f'{word} ' * order.count(word)
+      
+    #order=order.replace(word.lower(), f'{word} ')
+    
+  return order
+  
+if __name__ == "__main__": 
+  print(get_order("burgersandwich")) # повертає "Burger Sandwich" 
+  print(get_order("cokefriessandwichpizzaburger")) # повертає "Burger Fries Pizza Sandwich Coke" 
+  print(get_order("pizzachickenfriesburgercokemilkshakefriessandwich")) # повертає "Burger Fries Fries Chicken Pizza Sandwich Milkshake Coke"
+
+
+"""
 Map
 """
 
