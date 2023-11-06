@@ -1,4 +1,15 @@
 """
+D trolls
+"""
+
+def d_trolls(text: str) -> str:
+  new_text = [c for c in text if c.lower() not in 'euioa']
+  print(type(new_text))
+  return new_text
+
+print(d_trolls('Glory to Ukraine!'))
+
+"""
 Get order
 """
 
