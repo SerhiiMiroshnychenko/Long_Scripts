@@ -1,4 +1,19 @@
 """
+Two Sum
+"""
+
+def two_sum(numbers: list, target: int) -> list:
+  for index, number in enumerate(numbers):
+    print(f'{index=}: {number=}')
+    for index, number in enumerate(numbers):
+      if 
+    
+
+print(two_sum([2,7,11,15], 9))
+#assert two_sum([2,7,11,15], 9) == [0,1]
+
+
+"""
 Disemvowel trolls
 """
 
