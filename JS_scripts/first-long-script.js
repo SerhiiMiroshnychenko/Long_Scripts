@@ -1,3 +1,26 @@
+// if-else
+
+var score = parseInt(78, 10)
+
+/*
+
+88 and above => excellent
+
+40-87   => good
+
+0-39 => fail
+
+*/
+
+if (score >= 88) {
+    console.log("excellent");
+}
+else if (40 >= score && score < 88) {
+    console.log("good");
+}
+else {console.log("fail");}
+
+
 // Build-in Methods
 
 let res = [4, 5, 1, 8, 2, 0].filter(function (x) {
