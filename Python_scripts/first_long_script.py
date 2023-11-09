@@ -1,4 +1,14 @@
 """
+Try-except
+"""
+
+try:
+  """Code"""
+except:
+  print("Hello!")
+
+
+"""
 Two Sum
 """
 
