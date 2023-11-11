@@ -1,4 +1,28 @@
 """
+Iterable
+"""
+
+from collections.abc import Iterable
+
+def unpack(array: list[int]) -> list[int]:
+    for elem in array:
+        try:
+            unpack(elem)
+        except:
+            print(elem)
+            yield elem          
+
+def flat_list(array: list[int]) -> Iterable[int]:
+    result = []
+    for i in unpack(array):
+        result.append(i)
+    return result
+
+
+list(flat_list([-1, [1, [-2], 1], -1]))
+
+
+"""
 Try-except
 """
 
