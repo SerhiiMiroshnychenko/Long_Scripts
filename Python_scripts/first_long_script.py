@@ -1,4 +1,14 @@
 """
+Task with is
+"""
+
+a = 5.
+b = 5. ** 2
+b /= a
+print (a is b)
+
+
+"""
 Linear search
 """
 # Python3 code to linearly search x in arr[].
