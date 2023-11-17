@@ -1,4 +1,41 @@
 """
+Open class
+"""
+
+class Open:
+  def __init__(self, name, mode):
+    self.name = name
+    self.mode = mode
+    self.file = None
+
+  def __enter__(self):
+    if self.mode != 'x':
+      try:
+        self.file = open(self.name, 'r')
+        self.copy_file = self.file.read()
+        self.file.close()
+      except BaseException as e:
+        print(e.__class__, e)
+    self.file = open(self.name, self.mode)
+    return self.file
+
+  def __exit__(self, er, val, tb):
+     if er:
+       print(er, val, tb)
+       return True
+     else:
+       return None
+     if self.file and not self.file.closed:
+       self.file.close()
+       
+try:
+  with Open('text.txt', 'r') as f:
+    print(f.read())
+except BaseException as e:
+  print(e.__class__, e)
+
+
+"""
 Task with is
 """
 
