@@ -1,4 +1,12 @@
 """
+Question 0
+"""
+
+x = 5
+print (x << 2)
+
+
+"""
 Coma equal 
 """
 
