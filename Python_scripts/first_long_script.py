@@ -1,4 +1,28 @@
 """
+Context manager as a generator
+"""
+
+from contextlib import contextmanager
+
+@contextmanager
+def open_file(name, v):
+    f = open(name, v)
+    try:
+        yield f
+    except Exception as e:
+      print(e.__class__, e)
+    finally:
+        f.close()
+
+with open_file('some_file.txt', 'w') as f:
+    f.write('hola!')
+
+      
+with open_file('some_file.txt', 'r') as f:
+    print(f.read())
+
+
+"""
 Question 0
 """
 
