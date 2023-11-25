@@ -1,4 +1,24 @@
 """
+Generator 
+"""
+
+def sequence(end):
+    num = 0
+    while True:
+        yield num
+        try:
+           num += 1
+        except StopIteration:
+           num = 0
+           print (num)
+           return 
+
+s = sequence(10)
+print(*s)
+print(*s)
+
+
+"""
 Context manager
 """
 
