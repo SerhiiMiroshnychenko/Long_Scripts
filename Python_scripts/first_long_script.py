@@ -1,4 +1,26 @@
 """
+Type Decorator Class
+"""
+
+class TypeDecorators:
+
+  def to_int(func):
+    def inner(*args):
+      return int(func(*args))
+    return inner
+
+  @to_int
+  def __call__(self, )
+    
+
+@TypeDecorators.to_int
+def add_func(a, b):
+  return a + b
+
+x = add_func
+print(x)
+
+"""
 Class Decorator
 """
 
