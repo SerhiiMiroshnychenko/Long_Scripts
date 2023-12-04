@@ -1,4 +1,49 @@
 """
+Defended Vector Class
+"""
+
+class DefendedVector:
+  def __init__(self, v):
+    self.__v = v
+
+  def __enter__(self):
+    self.temp = self.__v[:]
+    return self.temp
+
+  def __exit__(self, exc_type, exc_val, exc_tb):
+    if exc_type is None:
+      self.__v[:] = self.temp
+    else:
+      print(exc_type, exc_val, exc_tb, sep='\n')
+    return True
+
+v1 = [1,2,3]
+v2 = [2,3]
+v3 = [2,3,4]
+
+vect = DefendedVector(v1)
+print('vect=',vect._DefendedVector__v)
+
+
+with vect as v:
+  for i, el in enumerate (v):
+    v[i] += v2[i]
+    print(v)
+    
+
+print('v1=',v1)
+print('vect=',vect._DefendedVector__v)
+
+with vect as v:
+  for i, el in enumerate (v):
+    v[i] += v3[i]
+    print(v)
+
+print('v1=',v1)
+print('vect=',vect._DefendedVector__v)
+
+
+"""
 Type Decorator Class
 """
 
