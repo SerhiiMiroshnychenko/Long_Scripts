@@ -1,4 +1,30 @@
 """
+wrap from functools
+"""
+
+from functools import wraps
+ 
+def stop_words(words: list):
+  def stop_words_decor(func):
+    @wrapper(func):
+    def wrap(*args, **kwargs):
+      result = func(*args, **kwargs)
+      for word in words:
+        result = result.replace(word, '*')
+      return result
+    return wrap
+  return stop_words_decor
+ 
+ 
+ 
+@stop_words(['pepsi', 'BMW'])
+def create_slogan(name: str) -> str:
+     print(f"{name} drinks pepsi in his brand new BMW!")
+     return f"{name} drinks pepsi in his brand new BMW!"
+
+
+
+"""
 Defended Vector Class
 """
 
