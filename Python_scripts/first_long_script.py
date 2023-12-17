@@ -1,4 +1,26 @@
 """
+my_squares_generator
+"""
+
+def my_squares_generator(f, t, s=1):
+   for i in range(f, t+1, s):
+      yield i ** 2
+
+c = my_squares_generator(1, 10, 2)
+
+print (c)
+print (*c, sep=' ➡️ ')
+
+
+s1 = (i**2 for i in range(10))
+s2 = [i**2 for i in range(10)]
+
+print (*s1, sep=' ➡️ ')
+print (*s2, sep=' ➡️ ')
+
+
+
+"""
 wrap from functools
 """
 
