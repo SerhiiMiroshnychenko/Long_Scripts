@@ -1,4 +1,41 @@
 """
+My Square Iterator
+"""
+
+class MySquareIterator:
+  def __init__(self, from_, to_, step_=1):
+    self.ind = from_
+    self.start = from_
+    self.to = to_
+    self.step = step_
+
+  def __iter__(self):
+    return self
+
+  def __next__(self):
+    if self.ind > self.to:
+      raise StopIteration
+    val = self.ind ** 2
+    self.ind += self.step
+    return val
+
+  def __str__(self):
+    return f'Iterator(start:{self.start}, end:{self.to}, step:{self.step})'
+ 
+
+c = MySquareIterator(1,10,2)
+for i in c:
+  print(i)
+
+try:
+ next(c)
+except Exception as e:
+  print(e.__class__, e)
+
+print(c)
+
+
+"""
 my_squares_generator
 """
 
