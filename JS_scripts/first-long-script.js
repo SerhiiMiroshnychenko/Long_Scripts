@@ -1,3 +1,14 @@
+// Translate DNA
+
+function translateDNA(dna) {
+  let rna = dna;
+  while (rna !== rna.replace('T', 'U')){
+  rna = rna.replace('T', 'U');
+};
+return rna;
+}
+
+
 // Reverse All Words
 
 function reverseAllWords(str) {
