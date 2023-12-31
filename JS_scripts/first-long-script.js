@@ -1,7 +1,13 @@
+// Remove first and last 
+
+function removeChars(str) {
+return str.slice(1, str.length - 1);
+}
+
+
 // Find the smallest
 
 function findTheSmallest(arr) {
-// tap below to start
 let min = arr[0];
 for(a of arr)
 min = a<min ? a : min;
