@@ -1,3 +1,17 @@
+// Reverse All Words
+
+function reverseAllWords(str) {
+let ls = str.length;
+let arr = str.split(' ');
+let la = arr.length;
+let ns = '';
+for (let a=la-1; a>=0; a--){
+  ns = ns + arr[a] + ' ';
+};
+return ns.slice(0, ls);
+}
+
+
 // Reverse string
 
 function reverseString(str) {
