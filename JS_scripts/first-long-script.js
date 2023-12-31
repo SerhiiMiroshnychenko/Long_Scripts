@@ -1,3 +1,15 @@
+// Reverse string
+
+function reverseString(str) {
+let l = str.length;
+let n = '';
+for (let a=l-1; a>=0; a--){
+  n = n + str[a];
+};
+return n;
+}
+
+
 // Remove first and last 
 
 function removeChars(str) {
