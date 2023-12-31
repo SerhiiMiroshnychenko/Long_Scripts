@@ -1,3 +1,19 @@
+// Count Vowels
+
+function countVowels(str) {
+let s = str.toLowerCase();
+let v = 'euioa';
+let l = str.length;
+let n = 0;
+for(let i=0; i<=l; i++){
+  if(v.includes(s[i])){
+    n++;
+    };
+  };
+return n;
+}
+
+
 // Translate DNA
 
 function translateDNA(dna) {
