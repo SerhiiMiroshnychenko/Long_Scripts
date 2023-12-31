@@ -1,3 +1,14 @@
+// Find the smallest
+
+function findTheSmallest(arr) {
+// tap below to start
+let min = arr[0];
+for(a of arr)
+min = a<min ? a : min;
+return min;
+}
+
+
 // BINARY SEARCH 
 
 import Comparator from '../../../utils/comparator/Comparator';
