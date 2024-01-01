@@ -1,3 +1,15 @@
+// Get the Average
+
+function getAverage(arr) {
+const l = arr.length;
+let s = 0;
+for (a in arr) {
+  s = s + arr[a];
+  };
+let result = s / l;
+return result;
+}
+
 // Count Vowels
 
 function countVowels(str) {
